@@ -1,0 +1,74 @@
+{
+    "TargetFile": "enchantingupgrades.json", 
+    "Author": "Ebrithil",
+    "RequireAll": true, 
+    "Patches": [
+        {
+            "Path": "$.MaximumFeatureLevels",
+            "Action": "Overwrite",
+            "Value": { 
+                "Sacrifice": 6, "ConvertMaterials": 6, "Enchant": 6, "Augment": 6, "Disenchant": 6 
+            }
+        },
+        {
+            "Path": "$.UpgradeCosts.Sacrifice",
+            "Action": "AppendAll",
+            "Value": [
+                [ { "Item": "SurtlingCore", "Amount": 30 }, { "Item": "Flametal", "Amount": 10 }, { "Item": "TrophyGjall", "Amount": 2 } ]
+            ]
+        },
+        {
+            "Path": "$.UpgradeCosts.ConvertMaterials",
+            "Action": "AppendAll",
+            "Value": [
+                [ { "Item": "Ashwood", "Amount": 30 }, { "Item": "MorgenHeart", "Amount": 10 }, { "Item": "CelestialFeather", "Amount": 10 } ]
+            ]
+        },
+        {
+            "Path": "$.UpgradeCosts.Enchant",
+            "Action": "AppendAll",
+            "Value": [
+                [ { "Item": "DustMythic", "Amount": 5 }, { "Item": "ProustitePowder", "Amount": 20 }, { "Item": "Flametal", "Amount": 2 } ]
+            ]
+        },
+        {
+            "Path": "$.UpgradeCosts.Augment",
+            "Action": "AppendAll",
+            "Value": [
+                [ { "Item": "ShardMythic", "Amount": 8 }, { "Item": "MoltenCore", "Amount": 5 }, { "Item": "Coins", "Amount": 800 } ]
+            ]
+        },
+        {
+            "Path": "$.UpgradeCosts.Disenchant",
+            "Action": "AppendAll",
+            "Value": [
+                [ { "Item": "ForestToken", "Amount": 200 }, { "Item": "Fiddleheadfern", "Amount": 100 } ]
+            ]
+        },
+        {
+            "Path": "$.UpgradeValues.Sacrifice",
+            "Action": "AppendAll",
+            "Value": [ [25] ]
+        },
+        {
+            "Path": "$.UpgradeValues.ConvertMaterials",
+            "Action": "AppendAll",
+            "Value": [ [2, 2] ]
+        },
+        {
+            "Path": "$.UpgradeValues.Enchant",
+            "Action": "AppendAll",
+            "Value": [ [6, 12] ]
+        },
+        {
+            "Path": "$.UpgradeValues.Augment",
+            "Action": "AppendAll",
+            "Value": [ [6, 75] ]
+        },
+        {
+            "Path": "$.UpgradeValues.Disenchant",
+            "Action": "AppendAll",
+            "Value": [ [25, 4] ]
+        }
+    ]
+}

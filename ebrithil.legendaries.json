@@ -1,0 +1,163 @@
+{
+    "TargetFile": "legendaries.json", 
+    "Author": "Ebrithil",
+    "RequireAll": true,
+    "Priority": 2000,
+    "Patches": [
+        {
+            "Path": "$.MythicItems",
+            "Action": "AppendAll",
+            "Value": [
+                ////////////////
+                // Thor Items //
+                ////////////////
+                {
+                    "ID": "mythicMjolnir",
+                    "Name": "$mod_epicloot_l_mjolnir",
+                    "Description": "$mod_epicloot_l_mjolnir_desc",
+                    "EquipFx": "LightningAuraSledge",
+                    "EquipFxMode": "EquipRoot",
+                    "IsSetItem": true,
+                    "Requirements": {
+                        "AllowedItemNames": [ "$item_sledge_demolisher" ]
+                    },
+                    "GuaranteedEffectCount": 7, 
+                    "GuaranteedMagicEffects": [
+                        { "Type": "ModifyPhysicalDamage" },
+                        { "Type": "AddLightningDamage" },
+                        { "Type": "Throwable" },
+                        { "Type": "RecallWeapon" },
+                        { "Type": "ModifyAttackSpeed" }
+                    ]
+                },
+                {
+                    "ID": "ThorHelmet",
+                    "Name": "Thor's Helm",
+                    "Description": "Protecting Thor's cranium since he picked up the hammer",
+                    "IsSetItem": true,
+                    "Requirements": {
+                        "AllowedItemNames": [ "$item_helmet_carapace", "$item_helmet_flametal" ]
+                    },
+                    "GuaranteedEffectCount": 7
+                },
+                {
+                    "ID": "ThorChest",
+                    "Name": "Thor's Breastplate",
+                    "Description": "Protecting Thor's heart since he picked up the hammer",
+                    "IsSetItem": true,
+                    "Requirements": {
+                        "AllowedItemNames": [ "$item_chest_carapace", "$item_chest_flametal" ]
+                    },
+                    "GuaranteedEffectCount": 7
+                },
+                {
+                    "ID": "ThorLegs",
+                    "Name": "Thor's Greaves",
+                    "Description": "Protecting Thor's calves since he picked up the hammer",
+                    "IsSetItem": true,
+                    "Requirements": {
+                        "AllowedItemNames": [ "$item_legs_carapace", "$item_legs_flametal" ]
+                    },
+                    "GuaranteedEffectCount": 7
+                },
+                {
+                    "ID": "ThorCape",
+                    "Name": "Thor's Cape",
+                    "Description": "Watching Thor's back since he picked up the hammer",
+                    "IsSetItem": true,
+                    "Requirements": {
+                        "AllowedItemNames": [ "$item_cape_lox", "$item_cape_ash", "$item_cape_asksvin" ]
+                    },
+                    "GuaranteedEffectCount": 7
+                },
+                /////////////////
+                // Floki Items //
+                /////////////////
+                {
+                    "ID": "FlokiTeeth",
+                    "Name": "Floki's Teeth",
+                    "Description": "Floki's beloved sharp edges",
+                    "IsSetItem": true,
+                    "Requirements": {
+                        "AllowedItemNames": [ "$item_axe_berzerkr" ]
+                    },
+                    "GuaranteedEffectCount": 7,
+                    "GuaranteedMagicEffects": [
+                        { "Type": "ModifyPhysicalDamage" },
+                        { "Type": "AddSlashingDamage" },
+                        { "Type": "AddSpiritDamage" },
+                        { "Type": "LifeSteal" },
+                        { "Type": "ModifyAttackStaminaUse" }
+                    ]
+                },
+                {
+                    "ID": "FlokiChest",
+                    "Name": "Floki's Chestpiece",
+                    "Description": "Keeps Floki's heart protected",
+                    "IsSetItem": true,
+                    "Requirements": {
+                        "AllowedItemNames": [ "$item_chest_carapace", "$item_chest_flametal" ]
+                    },
+                    "GuaranteedEffectCount": 7
+                },
+                {
+                    "ID": "FlokiLegs",
+                    "Name": "Floki's Leggings",
+                    "Description": "Floki's leg protection",
+                    "IsSetItem": true,
+                    "Requirements": {
+                        "AllowedItemNames": [ "$item_legs_carapace", "$item_legs_flametal" ]
+                    },
+                    "GuaranteedEffectCount": 7
+                },
+                {
+                    "ID": "FlokiHelmet",
+                    "Name": "Floki's Helmet",
+                    "Description": "Floki's Helm",
+                    "IsSetItem": true,
+                    "Requirements": {
+                        "AllowedItemNames": [ "$item_helmet_carapace", "$item_helmet_flametal" ]
+                    },
+                    "GuaranteedEffectCount": 7
+                }
+            ]
+        },
+        {
+            "Path": "$.MythicSets",
+            "Action": "AppendAll",
+            "Value": [
+                {
+                    "ID": "Floki",
+                    "Name": "Floki's Set",
+                    "LegendaryIDs": [
+                        "FlokiTeeth",
+                        "FlokiHelmet",
+                        "FlokiChest",
+                        "FlokiLegs"
+                    ],
+                    "SetBonuses": [
+                        { "Count": 2, "Effect": { "Type": "AddHealthRegen", "Values": { "MinValue": 5, "MaxValue": 7, "Increment": 1 } } },
+                        { "Count": 2, "Effect": { "Type": "ModifyStaminaRegen", "Values": { "MinValue": 50, "MaxValue": 75, "Increment": 1 } } },
+                        { "Count": 3, "Effect": { "Type": "Paralyze", "Values": { "MinValue": 5, "MaxValue": 7, "Increment": 1 } } },
+                        { "Count": 4, "Effect": { "Type": "AddKnivesSkill", "Values": { "MinValue": 15, "MaxValue": 25, "Increment": 1 } } },
+                        { "Count": 4, "Effect": { "Type": "DoubleJump" } }
+                    ]
+                },
+                {
+                    "ID": "Thor",
+                    "Name": "Thor's Set",
+                    "LegendaryIDs": [
+                        "mythicMjolnir",
+                        "ThorHelmet",
+                        "ThorChest",
+                        "ThorLegs",
+                        "ThorCape"
+                    ],
+                    "SetBonuses": [
+                        { "Count": 2, "Effect": { "Type": "AddHealthRegen", "Values": { "MinValue": 5, "MaxValue": 7, "Increment": 1 } } }
+                    ]
+                }
+            ]
+        }
+    ]
+}

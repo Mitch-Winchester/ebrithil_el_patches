@@ -1,0 +1,45 @@
+{
+    "TargetFile": "recipes.json", 
+    "Author": "Ebrithil",
+    "RequireAll": true, 
+    "Patches": [
+        {
+            "Path": "$.recipes",
+            "Action": "AppendAll",
+            "Value": [
+                {
+                    "name": "Recipe_BlackMetalIron",
+                    "item": "Iron",
+                    "craftingStation": "forge",
+                    "resources": [
+                        { "item": "BlackMetal", "amount": 2 }
+                    ]
+                },
+                {
+                    "name": "Recipe_ScaleSerpentTrophy",
+                    "item": "TrophySerpent",
+                    "craftingStation": "piece_workbench",
+                    "resources": [
+                        { "item": "SerpentScale", "amount": 10 }
+                    ]
+                },
+                {
+                    "name": "Recipe_CarapaceSeekerTrophy",
+                    "item": "TrophySeeker",
+                    "craftingStation": "blackforge",
+                    "resources": [
+                        { "item": "Carapace", "amount": 10 }
+                    ]
+                },
+                {
+                    "name": "Recipe_MandibleSeekerBruteTrophy",
+                    "item": "TrophySeekerBrute",
+                    "craftingStation": "blackforge",
+                    "resources": [
+                        { "item": "Mandible", "amount": 10 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

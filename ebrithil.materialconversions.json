@@ -1,0 +1,49 @@
+{
+    "TargetFile": "materialconversions.json", 
+    "Author": "Ebrithil",
+    "RequireAll": true, 
+    "Patches": [
+        {
+            "Path": "$.MaterialConversions",
+            "Action": "AppendAll",
+            "Value": [
+                {
+                    "Name": "Recipe_BlackMetalIron",
+                    "Product": "Iron",
+                    "Amount": 1,
+                    "Type": "Convert",
+                    "Resources": [
+                        { "Item": "BlackMetal", "Amount": 2 }
+                    ]
+                },
+                {
+                    "Name": "Recipe_ScaleSerpentTrophy",
+                    "Product": "TrophySerpent",
+                    "Amount": 1,
+                    "Type": "Junk",
+                    "Resources": [
+                        { "Item": "SerpentScale", "Amount": 10 }
+                    ]
+                },
+                {
+                    "Name": "Recipe_CarapaceSeekerTrophy",
+                    "Product": "TrophySeeker",
+                    "Amount": 1,
+                    "Type": "Junk",
+                    "Resources": [
+                        { "Item": "Carapace", "Amount": 10 }
+                    ]
+                },
+                {
+                    "Name": "Recipe_MandibleSeekerBruteTrophy",
+                    "Product": "TrophySeekerBrute",
+                    "Amount": 1,
+                    "Type": "Junk",
+                    "Resources": [
+                        { "Item": "Mandible", "Amount": 10 }
+                    ]
+                }
+            ]
+        }
+    ]
+}
