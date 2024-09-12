@@ -119,6 +119,19 @@
                         "AllowedItemNames": [ "$item_helmet_carapace", "$item_helmet_flametal" ]
                     },
                     "GuaranteedEffectCount": 7
+                },
+                ////////////////
+                // Loki Items //
+                ////////////////
+                {
+                    "ID": "LokiStaff",
+                    "Name": "Loki's Staff",
+                    "Description": "Loki's Magic Staff",
+                    "IsSetItem": true,
+                    "Requirements": {
+                        "AllowedItemTypes": "Staffs"
+                    },
+                    "GuaranteedEffectCount": 7
                 }
             ]
         },
@@ -139,8 +152,8 @@
                         { "Count": 2, "Effect": { "Type": "AddHealthRegen", "Values": { "MinValue": 5, "MaxValue": 7, "Increment": 1 } } },
                         { "Count": 2, "Effect": { "Type": "ModifyStaminaRegen", "Values": { "MinValue": 50, "MaxValue": 75, "Increment": 1 } } },
                         { "Count": 3, "Effect": { "Type": "Paralyze", "Values": { "MinValue": 5, "MaxValue": 7, "Increment": 1 } } },
-                        { "Count": 4, "Effect": { "Type": "AddKnivesSkill", "Values": { "MinValue": 15, "MaxValue": 25, "Increment": 1 } } },
-                        { "Count": 4, "Effect": { "Type": "DoubleJump" } }
+                        { "Count": 3, "Effect": { "Type": "AddKnivesSkill", "Values": { "MinValue": 15, "MaxValue": 25, "Increment": 1 } } },
+                        { "Count": 4, "Effect": { "Type": "ModifyBackstab", "Values": { "MinValue": 10, "MaxValue": 15, "Increment": 0.25 } } }
                     ]
                 },
                 {
@@ -154,7 +167,23 @@
                         "ThorCape"
                     ],
                     "SetBonuses": [
-                        { "Count": 2, "Effect": { "Type": "AddHealthRegen", "Values": { "MinValue": 5, "MaxValue": 7, "Increment": 1 } } }
+                        { "Count": 2, "Effect": { "Type": "AddLightningDamage", "Values": { "MinValue": 15, "MaxValue": 20, "Increment": 1 } } },
+                        { "Count": 2, "Effect": { "Type": "ModifyMovementSpeed", "Values": { "MinValue": 15, "MaxValue": 20, "Increment": 1 } } },
+                        { "Count": 3, "Effect": { "Type": "AddMovementSkills", "Values": { "MinValue": 15, "MaxValue": 20, "Increment": 1 } } },
+                        { "Count": 4, "Effect": { "Type": "DoubleJump" } },
+                        { "Count": 5, "Effect": { "Type": "FeatherFall" } }
+                    ]
+                },
+                {
+                    "ID": "Loki",
+                    "Name": "Loki's Set",
+                    "LegendaryIDs": [
+                        "LokiStaff"
+                    ],
+                    "SetBonuses": [
+                        { "Count": 2, "Effect": { "Type": "ModifyEitrRegen", "Values": { "MinValue": 25, "MaxValue": 30 } } },
+                        { "Count": 2, "Effect": { "Type": "IncreaseEitr", "Values": { "MinValue": 20, "MaxValue": 25 } } },
+                        { "Count": 5, "Effect": { "Type": "Undying" } }
                     ]
                 }
             ]
