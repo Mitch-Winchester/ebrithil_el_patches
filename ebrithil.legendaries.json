@@ -8,6 +8,57 @@
             "Path": "$.MythicItems",
             "Action": "AppendAll",
             "Value": [
+                //////////////////
+                // Ragnar Items //
+                //////////////////
+                {
+                    "ID": "mythicRagnarBattleAxe",
+                    "Name": "$mod_epicloot_l_ragnarbattleaxe",
+                    "Description": "$mod_epicloot_l_ragnarbattleaxe_desc",
+                    "EquipFx": "FrostAuraBattleAxe",
+                    "EquipFxMode": "EquipRoot", 
+                    "IsSetItem": true, 
+                    "Requirements": {
+                      "AllowedItemTypes": [ "TwoHandedWeapon" ], 
+                      "AllowedSkillTypes": [ "Axes" ]
+                    },
+                    "GuaranteedEffectCount": 7,
+                    "GuaranteedMagicEffects": [
+                      { "Type": "ModifyPhysicalDamage" },
+                      { "Type": "AddFrostDamage" }
+                    ]
+                  },
+                  {
+                    "ID": "mythicRagnarCape",
+                    "Name": "$mod_epicloot_l_ragnarcape",
+                    "Description": "$mod_epicloot_l_ragnarcape_desc",
+                    "IsSetItem": true, 
+                    "Requirements": {
+                      "AllowedItemNames": [ "$item_cape_lox", "$item_cape_ash", "$item_cape_asksvin" ]
+                    },
+                    "GuaranteedEffectCount": 7
+                  },
+                  {
+                    "ID": "mythicRagnarChest",
+                    "Name": "$mod_epicloot_l_ragnarchest",
+                    "Description": "$mod_epicloot_l_ragnarchest_desc",
+                    "TextureReplacements": [ { "ItemID": "ArmorPaddedCuirass", "MainTexture": "paddedarmortest2_d", "ChestTex": "PaddedArmorChest2_d" } ],
+                    "IsSetItem": true, 
+                    "Requirements": {
+                      "AllowedItemNames": [ "$item_chest_carapace", "$item_chest_flametal" ]
+                    },
+                    "GuaranteedEffectCount": 7
+                  },
+                  {
+                    "ID": "mythicRagnarLegs",
+                    "Name": "$mod_epicloot_l_ragnarlegs",
+                    "Description": "$mod_epicloot_l_ragnarlegs_desc",
+                    "IsSetItem": true, 
+                    "Requirements": {
+                      "AllowedItemNames": [ "$item_legs_carapace", "$item_legs_flametal" ]
+                    },
+                    "GuaranteedEffectCount": 7
+                  },
                 ////////////////
                 // Thor Items //
                 ////////////////
@@ -79,7 +130,7 @@
                     "Description": "Floki's beloved sharp edges",
                     "IsSetItem": true,
                     "Requirements": {
-                        "AllowedItemNames": [ "$item_axe_berzerkr" ]
+                        "AllowedItemNames": [ "$item_knife_skollandhati", "$item_axe_berzerkr" ]
                     },
                     "GuaranteedEffectCount": 7,
                     "GuaranteedMagicEffects": [
@@ -129,9 +180,52 @@
                     "Description": "Loki's Magic Staff",
                     "IsSetItem": true,
                     "Requirements": {
-                        "AllowedItemTypes": "Staffs"
+                        "AllowedItemTypes": [ "Staffs" ]
                     },
                     "GuaranteedEffectCount": 7
+                },
+                {
+                    "ID": "LokiHelmet",
+                    "Name": "Loki's Helm",
+                    "Description": "Loki wishes this was a crown",
+                    "IsSetItem": true,
+                    "Requirements": {
+                        "AllowedItemNames": [ "$item_helmet_mage", "$item_helmet_mage_ashlands" ]
+                    },
+                    "GuaranteedEffectCount": 7
+                },
+                {
+                    "ID": "LokiChest",
+                    "Name": "Loki's Robes",
+                    "Description": "Loki's Robes",
+                    "IsSetItem": true,
+                    "Requirements": {
+                        "AllowedItemNames": [ "$item_chest_mage", "$item_chest_mage_ashlands" ]
+                    },
+                    "GuaranteedEffectCount": 7
+                },
+                {
+                    "ID": "LokiLegs",
+                    "Name": "Loki's Trousers",
+                    "Description": "Loki's Trousers",
+                    "IsSetItem": true,
+                    "Requirements": {
+                        "AllowedItemNames": [ "$item_legs_mage", "$item_legs_mage_ashlands" ]
+                    },
+                    "GuaranteedEffectCount": 7
+                },
+                {
+                    "ID": "LokiCape",
+                    "Name": "Loki's Cape",
+                    "Description": "Loki's Magic Cape",
+                    "IsSetItem": true,
+                    "Requirements": {
+                        "AllowedItemNames": [ "$item_cape_feather", "$item_cape_ash", "$item_cape_asksvin" ]
+                    },
+                    "GuaranteedEffectCount": 7,
+                    "GuaranteedMagicEffects": [
+                        { "Type": "FeatherFall" }
+                    ]
                 }
             ]
         },
@@ -139,6 +233,23 @@
             "Path": "$.MythicSets",
             "Action": "AppendAll",
             "Value": [
+                {
+                    "ID": "mythicRagnar",
+                    "Name": "$mod_epicloot_set_ragnar",
+                    "LegendaryIDs": [
+                      "mythicRagnarBattleAxe",
+                      "mythicRagnarCape",
+                      "mythicRagnarChest",
+                      "mythicRagnarLegs"
+                    ],
+                    "SetBonuses": [
+                      { "Count": 2, "Effect": { "Type": "AddHealthRegen", "Values": { "MinValue": 3, "MaxValue": 3, "Increment": 1 } } },
+                      { "Count": 2, "Effect": { "Type": "ModifyHealthRegen", "Values": { "MinValue": 50, "MaxValue": 50, "Increment": 1 } } },
+                      { "Count": 3, "Effect": { "Type": "Berserker" } },
+                      { "Count": 4, "Effect": { "Type": "FrostDamageAOE", "Values": { "MinValue": 40, "MaxValue": 40, "Increment": 1 } } },
+                      { "Count": 4, "Effect": { "Type": "ModifyPhysicalDamage", "Values": { "MinValue": 18, "MaxValue": 20, "Increment": 1 } } }
+                    ]
+                },
                 {
                     "ID": "Floki",
                     "Name": "Floki's Set",
@@ -178,11 +289,17 @@
                     "ID": "Loki",
                     "Name": "Loki's Set",
                     "LegendaryIDs": [
-                        "LokiStaff"
+                        "LokiStaff",
+                        "LokiHelmet",
+                        "LokiChest",
+                        "LokiLegs",
+                        "LokiCape"
                     ],
                     "SetBonuses": [
-                        { "Count": 2, "Effect": { "Type": "ModifyEitrRegen", "Values": { "MinValue": 25, "MaxValue": 30 } } },
-                        { "Count": 2, "Effect": { "Type": "IncreaseEitr", "Values": { "MinValue": 20, "MaxValue": 25 } } },
+                        { "Count": 2, "Effect": { "Type": "ModifyEitrRegen", "Values": { "MinValue": 30, "MaxValue": 30 } } },
+                        { "Count": 2, "Effect": { "Type": "IncreaseEitr", "Values": { "MinValue": 50, "MaxValue": 50 } } },
+                        { "Count": 3, "Effect": { "Type": "AddElementalMagicSkill", "Values": { "MinValue": 20, "MaxValue": 20 } } },
+                        { "Count": 4, "Effect": { "Type": "AddBloodMagicSkill", "Values": { "MinValue": 20, "MaxValue": 20 } } },
                         { "Count": 5, "Effect": { "Type": "Undying" } }
                     ]
                 }

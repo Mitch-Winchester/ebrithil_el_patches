@@ -21,7 +21,7 @@
             "Path": "$.UpgradeCosts.ConvertMaterials",
             "Action": "AppendAll",
             "Value": [
-                [ { "Item": "Ashwood", "Amount": 30 }, { "Item": "MorgenHeart", "Amount": 10 }, { "Item": "CelestialFeather", "Amount": 10 } ]
+                [ { "Item": "CharredBone", "Amount": 30 }, { "Item": "MorgenHeart", "Amount": 10 }, { "Item": "CelestialFeather", "Amount": 10 } ]
             ]
         },
         {
