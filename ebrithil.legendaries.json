@@ -27,8 +27,8 @@
                       { "Type": "ModifyPhysicalDamage" },
                       { "Type": "AddFrostDamage" }
                     ]
-                  },
-                  {
+                },
+                {
                     "ID": "mythicRagnarCape",
                     "Name": "$mod_epicloot_l_ragnarcape",
                     "Description": "$mod_epicloot_l_ragnarcape_desc",
@@ -37,19 +37,18 @@
                       "AllowedItemNames": [ "$item_cape_lox", "$item_cape_ash", "$item_cape_asksvin" ]
                     },
                     "GuaranteedEffectCount": 7
-                  },
-                  {
+                },
+                {
                     "ID": "mythicRagnarChest",
                     "Name": "$mod_epicloot_l_ragnarchest",
                     "Description": "$mod_epicloot_l_ragnarchest_desc",
-                    "TextureReplacements": [ { "ItemID": "ArmorPaddedCuirass", "MainTexture": "paddedarmortest2_d", "ChestTex": "PaddedArmorChest2_d" } ],
                     "IsSetItem": true, 
                     "Requirements": {
                       "AllowedItemNames": [ "$item_chest_carapace", "$item_chest_flametal" ]
                     },
                     "GuaranteedEffectCount": 7
-                  },
-                  {
+                },
+                {
                     "ID": "mythicRagnarLegs",
                     "Name": "$mod_epicloot_l_ragnarlegs",
                     "Description": "$mod_epicloot_l_ragnarlegs_desc",
@@ -58,7 +57,85 @@
                       "AllowedItemNames": [ "$item_legs_carapace", "$item_legs_flametal" ]
                     },
                     "GuaranteedEffectCount": 7
-                  },
+                },
+                ////////////////////
+                // Heimdall Items //
+                ////////////////////
+                {
+                    "ID": "mythicHeimdallShield",
+                    "Name": "$mod_epicloot_l_heimdalltowershield",
+                    "Description": "$mod_epicloot_l_heimdalltowershield_desc",
+                    "IsSetItem": true, 
+                    "Requirements": {
+                        "AllowedItemNames": [
+                            "$item_shield_carapace",
+                            "$item_shield_flametal",
+                            "$item_shield_flametal_tower"
+                        ]
+                    },
+                    "GuaranteedEffectCount": 7,
+                    "GuaranteedMagicEffects": [
+                        { "Type": "Immovable" }
+                    ]
+                },
+                {
+                    "ID": "mythicHeimdallHelmet",
+                    "Name": "$mod_epicloot_l_heimdallhelmet",
+                    "Description": "$mod_epicloot_l_heimdallhelmet_desc",
+                    "IsSetItem": true, 
+                    "Requirements": {
+                        "AllowedItemNames": [ "$item_helmet_carapace", "$item_helmet_flametal" ]
+                    },
+                    "GuaranteedEffectCount": 7,
+                    "GuaranteedMagicEffects": [
+                        { "Type": "ModifyArmorLowHealth" },
+                        { "Type": "ModifyStaminaRegenLowHealth" }
+                    ]
+                },
+                {
+                    "ID": "mythicHeimdallChest",
+                    "Name": "$mod_epicloot_l_heimdallchest",
+                    "Description": "$mod_epicloot_l_heimdallchest_desc",
+                    "IsSetItem": true, 
+                    "Requirements": {
+                        "AllowedItemNames": [ "$item_chest_carapace", "$item_chest_flametal" ]
+                    },
+                    "GuaranteedEffectCount": 7, 
+                    "GuaranteedMagicEffects": [
+                        { "Type": "ModifyArmor" },
+                        { "Type": "IncreaseStamina" }
+                    ]
+                },
+                {
+                    "ID": "mythicHeimdallLegs",
+                    "Name": "$mod_epicloot_l_heimdalllegs",
+                    "Description": "$mod_epicloot_l_heimdalllegs_desc",
+                    "IsSetItem": true, 
+                    "Requirements": {
+                        "AllowedItemNames": [ "$item_legs_carapace", "$item_legs_flametal" ]
+                    },
+                    "GuaranteedEffectCount": 7, 
+                    "GuaranteedMagicEffects": [
+                        { "Type": "AddMovementSkills" },
+                        { "Type": "ModifyMovementSpeedLowHealth" }
+                    ]
+                },
+                {
+                    "ID": "mythicHeimdallSword",
+                    "Name": "Hofund",
+                    "Description": "Hofund, the legendary sword of Heimdall, is imbued with extraordinary powers that elevate it beyond the realm of ordinary weapons. Its edge is said to be so sharp that it can cut through anything, symbolizing its ability to overcome any obstacle.",
+                    "IsSetItem": true,
+                    "Requiremtns": {
+                        "AllowedItemNames": [
+                            "$item_sword_mistwalker",
+                            "$item_thsword_krom",
+                            "$item_sword_niedhogg",
+                            "$item_thsword_slayer",
+                            "$item_sword_dyrnwyn"
+                        ]
+                    },
+                    "GuaranteedEffectCount": 7
+                }
                 ////////////////
                 // Thor Items //
                 ////////////////
@@ -240,14 +317,33 @@
                       "mythicRagnarBattleAxe",
                       "mythicRagnarCape",
                       "mythicRagnarChest",
-                      "mythicRagnarLegs"
+                      "mythicRagnarLegs",
+                      "mythicRagnarHelmet"
                     ],
                     "SetBonuses": [
-                      { "Count": 2, "Effect": { "Type": "AddHealthRegen", "Values": { "MinValue": 3, "MaxValue": 3, "Increment": 1 } } },
-                      { "Count": 2, "Effect": { "Type": "ModifyHealthRegen", "Values": { "MinValue": 50, "MaxValue": 50, "Increment": 1 } } },
+                      { "Count": 2, "Effect": { "Type": "AddHealthRegen", "Values": { "MinValue": 5, "MaxValue": 5, "Increment": 1 } } },
+                      { "Count": 2, "Effect": { "Type": "ModifyHealthRegen", "Values": { "MinValue": 75, "MaxValue": 75, "Increment": 1 } } },
                       { "Count": 3, "Effect": { "Type": "Berserker" } },
-                      { "Count": 4, "Effect": { "Type": "FrostDamageAOE", "Values": { "MinValue": 40, "MaxValue": 40, "Increment": 1 } } },
-                      { "Count": 4, "Effect": { "Type": "ModifyPhysicalDamage", "Values": { "MinValue": 18, "MaxValue": 20, "Increment": 1 } } }
+                      { "Count": 4, "Effect": { "Type": "FrostDamageAOE", "Values": { "MinValue": 60, "MaxValue": 60, "Increment": 1 } } },
+                      { "Count": 5, "Effect": { "Type": "ModifyPhysicalDamage", "Values": { "MinValue": 18, "MaxValue": 20, "Increment": 1 } } }
+                    ]
+                },
+                {
+                    "ID": "mythicHeimdall",
+                    "Name": "$mod_epicloot_set_heimdall",
+                    "LegendaryIDs": [
+                        "mythicHeimdallShield",
+                        "mythicHeimdallHelmet",
+                        "mythicHeimdallChest",
+                        "mythicHeimdallLegs",
+                        "mythicHeimdallSword"
+                    ],
+                    "SetBonuses": [
+                        { "Count": 2, "Effect": { "Type": "ModifyBlockPower", "Values": { "MinValue": 60, "MaxValue": 60, "Increment": 1 } } },
+                        { "Count": 2, "Effect": { "Type": "ModifyStaminaRegen", "Values": { "MinValue": 75, "MaxValue": 75, "Increment": 1 } } },
+                        { "Count": 3, "Effect": { "Type": "Bulwark" } },
+                        { "Count": 4, "Effect": { "Type": "ModifyArmor", "Values": { "MinValue": 20, "MaxValue": 20, "Increment": 1 } } },
+                        { "Count": 5, "Effect": { "Type": "Undying" } }
                     ]
                 },
                 {
@@ -260,11 +356,11 @@
                         "FlokiLegs"
                     ],
                     "SetBonuses": [
-                        { "Count": 2, "Effect": { "Type": "AddHealthRegen", "Values": { "MinValue": 5, "MaxValue": 7, "Increment": 1 } } },
-                        { "Count": 2, "Effect": { "Type": "ModifyStaminaRegen", "Values": { "MinValue": 50, "MaxValue": 75, "Increment": 1 } } },
-                        { "Count": 3, "Effect": { "Type": "Paralyze", "Values": { "MinValue": 5, "MaxValue": 7, "Increment": 1 } } },
-                        { "Count": 3, "Effect": { "Type": "AddKnivesSkill", "Values": { "MinValue": 15, "MaxValue": 25, "Increment": 1 } } },
-                        { "Count": 4, "Effect": { "Type": "ModifyBackstab", "Values": { "MinValue": 10, "MaxValue": 15, "Increment": 0.25 } } }
+                        { "Count": 2, "Effect": { "Type": "AddHealthRegen", "Values": { "MinValue": 5, "MaxValue": 5, "Increment": 1 } } },
+                        { "Count": 2, "Effect": { "Type": "ModifyStaminaRegen", "Values": { "MinValue": 75, "MaxValue": 75, "Increment": 1 } } },
+                        { "Count": 3, "Effect": { "Type": "Paralyze", "Values": { "MinValue": 5, "MaxValue": 5, "Increment": 1 } } },
+                        { "Count": 3, "Effect": { "Type": "AddKnivesSkill", "Values": { "MinValue": 25, "MaxValue": 25, "Increment": 1 } } },
+                        { "Count": 4, "Effect": { "Type": "ModifyBackstab", "Values": { "MinValue": 15, "MaxValue": 15, "Increment": 0.25 } } }
                     ]
                 },
                 {
@@ -278,9 +374,9 @@
                         "ThorCape"
                     ],
                     "SetBonuses": [
-                        { "Count": 2, "Effect": { "Type": "AddLightningDamage", "Values": { "MinValue": 15, "MaxValue": 20, "Increment": 1 } } },
-                        { "Count": 2, "Effect": { "Type": "ModifyMovementSpeed", "Values": { "MinValue": 15, "MaxValue": 20, "Increment": 1 } } },
-                        { "Count": 3, "Effect": { "Type": "AddMovementSkills", "Values": { "MinValue": 15, "MaxValue": 20, "Increment": 1 } } },
+                        { "Count": 2, "Effect": { "Type": "AddLightningDamage", "Values": { "MinValue": 20, "MaxValue": 20, "Increment": 1 } } },
+                        { "Count": 2, "Effect": { "Type": "ModifyMovementSpeed", "Values": { "MinValue": 20, "MaxValue": 20, "Increment": 1 } } },
+                        { "Count": 3, "Effect": { "Type": "AddMovementSkills", "Values": { "MinValue": 20, "MaxValue": 20, "Increment": 1 } } },
                         { "Count": 4, "Effect": { "Type": "DoubleJump" } },
                         { "Count": 5, "Effect": { "Type": "FeatherFall" } }
                     ]
